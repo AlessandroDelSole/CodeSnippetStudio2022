@@ -1,1 +1,1 @@
-# CodeSnippetStudio2022
+# Code Snippet Studio 2022
