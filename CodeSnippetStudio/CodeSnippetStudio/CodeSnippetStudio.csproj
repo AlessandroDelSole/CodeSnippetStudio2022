@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>17.0</MinimumVisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{12F3113E-E1EE-4A6D-A134-4A6B551432C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeSnippetStudio</RootNamespace>
+    <AssemblyName>CodeSnippetStudio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
+    <UseCodebase>true</UseCodebase>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>true</CopyOutputSymbolsToOutputDirectory>
+    <StartAction>Program</StartAction>
+    <StartProgram Condition="'$(DevEnvDir)' != ''">$(DevEnvDir)devenv.exe</StartProgram>
+    <StartArguments>/rootsuffix Exp</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CodeSnippetStudioToolWindow.cs" />
+    <Compile Include="CodeSnippetStudioToolWindowCommand.cs" />
+    <Compile Include="CodeSnippetStudioToolWindowControl.xaml.cs">
+      <DependentUpon>CodeSnippetStudioToolWindowControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocationConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CodeSnippetStudioPackage.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\certificate_16xLG.png" />
+    <Resource Include="Images\document_16xLG.png" />
+    <Resource Include="Images\EditRelation_310.png" />
+    <Resource Include="Images\Error_6206.png" />
+    <Resource Include="Images\ExtensionManager_vsix.png" />
+    <Resource Include="Images\Find_5650.png" />
+    <Resource Include="Images\folder_Open_16xLG.png" />
+    <Resource Include="Images\FolderBrowserDialogControl_678.png" />
+    <Resource Include="Images\Hammer_Builder_16xLG.png" />
+    <Resource Include="Images\ImportOrLoad_8600.png" />
+    <Resource Include="Images\Open_6529.png" />
+    <Resource Include="Images\package_16xLG.png" />
+    <Resource Include="Images\properties_16xLG.png" />
+    <Resource Include="Images\reference_16xLG.png" />
+    <Resource Include="Images\RestoreDefaultView_9695.png" />
+    <Resource Include="Images\save_16xLG.png" />
+    <Resource Include="Images\snippet_16xLG.png" />
+    <Resource Include="Images\StatusAnnotations_Help_and_inconclusive_16xLG_color.png" />
+    <Resource Include="Images\SaveFileDialogControl_703.png" />
+    <Resource Include="Images\AddMark_10580.png" />
+    <Resource Include="Images\AddTextFile.png" />
+    <Resource Include="Images\Remove_16xLG.png" />
+    <Resource Include="Images\AddSnippet.png" />
+    <Content Include="Resources\CodeSnippetStudioToolWindowPackage.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="app.config" />
+    <Content Include="Code_Snippet_Studio_User_Guide.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNetZip">
+      <Version>1.16.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.Common">
+      <Version>4.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.0.32112.339" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.2.2186" />
+    <PackageReference Include="Syncfusion.Edit.WPF">
+      <Version>20.1.0.58</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.PropertyGrid.WPF">
+      <Version>20.1.0.58</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.SfGrid.WPF">
+      <Version>20.1.0.58</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Shared.WPF">
+      <Version>20.1.0.58</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Tools.WPF">
+      <Version>20.1.0.58</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Tools.WPF.Classic">
+      <Version>19.4.0.56</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="CodeSnippetStudioToolWindowControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <VSCTCompile Include="CodeSnippetStudioPackage.vsct">
+      <ResourceName>Menus.ctmenu</ResourceName>
+    </VSCTCompile>
+    <Resource Include="Images\CommandIcon.png" />
+    <Resource Include="Images\CSS_AppIcon.png" />
+    <Resource Include="Images\CSS_AppIcon_SM.png" />
+    <Resource Include="Images\delete.png" />
+    <Resource Include="Images\ImportSublime.png" />
+    <Resource Include="Images\Namespace.png" />
+    <Resource Include="Images\PackagePreview.png" />
+    <Resource Include="Images\Save_For_Code.png" />
+    <Resource Include="Images\Save_For_VS.png" />
+    <Resource Include="Images\VSContentInstaller_16.png" />
+    <Content Include="Apache_License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="PreviewImage.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\CodeSnippetStudioToolWindowCommand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DelSole.Snippet\DelSole.Snippet.vbproj">
+      <Project>{a9926cde-88db-4a32-bbc6-7f8ad3444005}</Project>
+      <Name>DelSole.Snippet</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

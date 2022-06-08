@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="CodeSnippets">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CodeSnippet">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Header">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Title" type="xs:string" />
+										<xs:element name="Shortcut" type="xs:string" />
+										<xs:element name="Description" type="xs:string" />
+										<xs:element name="Author" type="xs:string" />
+										<xs:element name="SnippetTypes">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="SnippetType" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Snippet">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Declarations">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element maxOccurs="unbounded" name="Literal">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="ID" type="xs:string" />
+																<xs:element name="ToolTip" type="xs:string" />
+																<xs:element name="Default" type="xs:string" />
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="References">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Reference">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Assembly" type="xs:string" />
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Code">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="Language" type="xs:string" use="required" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Format" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
