@@ -83,6 +83,10 @@
     <Resource Include="Images\AddTextFile.png" />
     <Resource Include="Images\Remove_16xLG.png" />
     <Resource Include="Images\AddSnippet.png" />
+    <Content Include="ReleaseNotes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Resources\CodeSnippetStudioToolWindowPackage.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>

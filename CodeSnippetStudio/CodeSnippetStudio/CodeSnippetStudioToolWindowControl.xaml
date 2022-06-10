@@ -128,7 +128,7 @@
                     <syncfusion:DockingManager Grid.Row="2" x:Name="DockingManager" UseDocumentContainer="True">
                         <syncfusion:PropertyGrid x:Name="SnippetPropertyGrid" SelectedObject="{Binding}" syncfusion:DockingManager.Header="Properties" 
                                     syncfusion:DockingManager.SideInDockedMode="Right" syncfusion:DockingManager.CanClose="False"
-                                     syncfusion:DockingManager.CanDocument="False" 
+                                     syncfusion:DockingManager.CanDocument="False" syncfusion:DockingManager.DesiredWidthInDockedMode="250"
                                                  syncfusion:DockingManager.DesiredMinWidthInFloatingMode="200">
                             <syncfusion:DockingManager.Icon>
                                 <ImageBrush ImageSource="/CodeSnippetStudio;component/Images/properties_16xLG.png"  />
@@ -136,7 +136,7 @@
                         </syncfusion:PropertyGrid>
                         <Grid syncfusion:DockingManager.SideInDockedMode="Left" syncfusion:DockingManager.Header="Library"
                                   syncfusion:DockingManager.CanClose="False" syncfusion:DockingManager.CanDocument="False"
-                                   >
+                                   syncfusion:DockingManager.DesiredWidthInDockedMode="220">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="25"/>
                                 <RowDefinition Height="25"/>
@@ -541,7 +541,7 @@
                         <StackPanel>
                             <Button Margin="5" Name="HelpButton" Width="150" Height="30" HorizontalAlignment="Left" Click="HelpButton_Click">Show user guide (PDF)</Button>
                             <Label Margin="5,0,0,0" >
-                                <Hyperlink NavigateUri="https://msdn.microsoft.com/en-us/library/ms171418.aspx" RequestNavigate="Hyperlink_RequestNavigate" >
+                                <Hyperlink NavigateUri="https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2017/ide/code-snippets-schema-reference" RequestNavigate="Hyperlink_RequestNavigate" >
                                     <InlineUIContainer>
                                         <TextBlock Text="Code Snippets Schema Reference" />
                                     </InlineUIContainer>

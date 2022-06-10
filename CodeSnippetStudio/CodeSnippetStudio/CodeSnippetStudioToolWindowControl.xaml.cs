@@ -183,6 +183,7 @@ namespace CodeSnippetStudio
         private void GenerateNewSnippet()
         {
             this.SnippetData = new CodeSnippet();
+            this.SnippetData.Language = Settings.Default.PreferredLanguage;
             this.EditorRoot.DataContext = SnippetData;
             editControl1.SetValue(Syncfusion.Windows.Tools.Controls.DockingManager.HeaderProperty, "Untitled");
             this.SnippetData.IsDirty = false;
@@ -457,7 +458,7 @@ namespace CodeSnippetStudio
 
         private void HelpButton_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://github.com/AlessandroDelSole/CodeSnippetStudio/blob/master/CodeSnippetStudio_StandAlone/Assets/Code_Snippet_Studio_User_Guide.pdf");
+            Process.Start("https://github.com/AlessandroDelSole/CodeSnippetStudio2022/blob/master/CodeSnippetStudio/CodeSnippetStudio/Code_Snippet_Studio_User_Guide.pdf");
         }
 
         private void SaveSettings()
@@ -943,7 +944,7 @@ namespace CodeSnippetStudio
 
         private void AboutButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Process.Start("https://github.com/AlessandroDelSole/CodeSnippetStudio");
+            Process.Start("https://github.com/AlessandroDelSole/CodeSnippetStudio2022");
         }
 
         private void VsiButton_Click(object sender, System.Windows.RoutedEventArgs e)

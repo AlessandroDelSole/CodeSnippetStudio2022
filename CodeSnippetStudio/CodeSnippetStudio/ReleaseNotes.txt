@@ -1,0 +1,7 @@
+﻿Code Snippet Studio 2022 Release Notes
+
+Version 2.1
+
+- Adjusted docking panels minimum width
+- Fixed bug on empty language with new snippets created with the New button
+- Fixed hyperlinks to extension documentation

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="CodeSnippetStudio.7fca7ec2-55b3-4a23-822f-d68665ddd828" Version="2.0" Language="en-US" Publisher="Alessandro Del Sole" />
+        <Identity Id="CodeSnippetStudio.7fca7ec2-55b3-4a23-822f-d68665ddd828" Version="2.1" Language="en-US" Publisher="Alessandro Del Sole" />
         <DisplayName>Code Snippet Studio</DisplayName>
         <Description xml:space="preserve">Create, edit, package, and share IntelliSense code snippets for Visual Studio 2022.</Description>
         <MoreInfo>https://github.com/AlessandroDelSole/CodeSnippetStudio2022</MoreInfo>
         <License>Apache_License.txt</License>
         <GettingStartedGuide>Code_Snippet_Studio_User_Guide.docx</GettingStartedGuide>
+        <ReleaseNotes>ReleaseNotes.txt</ReleaseNotes>
         <Icon>Resources\CodeSnippetStudioToolWindowPackage.ico</Icon>
         <PreviewImage>PreviewImage.jpg</PreviewImage>
         <Tags>snippet</Tags>
