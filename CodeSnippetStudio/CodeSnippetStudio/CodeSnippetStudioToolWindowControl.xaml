@@ -121,7 +121,7 @@
                             <Image Width="16" Height="16" Source="/CodeSnippetStudio;component/Images/AddMark_10580.png" />
                         </Button>
 
-                        <Button Margin="5,0,0,0" Width="24" x:Name="DeleteDecButton" ToolTip="Delete selected declaration">
+                        <Button Margin="5,0,0,0" Width="24" x:Name="DeleteDecButton" Click="DeleteDecButton_Click" ToolTip="Delete selected declaration">
                             <Image Width="16" Height="16" Source="/CodeSnippetStudio;component/Images/Remove_16xLG.png" />
                         </Button>
                     </StackPanel>
@@ -222,6 +222,7 @@
                         </syncfusion:SfDataGrid>
 
                         <syncfusion:SfDataGrid x:Name="ErrorList" syncfusion:DockingManager.Header="Error List" syncfusion:DockingManager.SideInDockedMode="Tabbed"
+                                               SelectionChanged="ErrorList_SelectionChanged"
                                                syncfusion:DockingManager.CanClose="False" syncfusion:DockingManager.CanDocument="False" AutoGenerateColumns="False"
                                                syncfusion:DockingManager.TargetNameInDockedMode="DeclarationsDataGrid" CurrentCellRequestNavigate="ErrorList_CurrentCellRequestNavigate" AllowResizingColumns="True" ColumnSizer="AutoWithLastColumnFill">
                             <syncfusion:SfDataGrid.Columns>

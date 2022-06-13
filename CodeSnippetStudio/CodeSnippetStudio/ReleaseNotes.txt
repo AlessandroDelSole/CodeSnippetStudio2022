@@ -1,5 +1,10 @@
 ﻿Code Snippet Studio 2022 Release Notes
 
+Version 2.2
+
+- Fixed bug on error list line selection, now redirects to the line in the code editor
+- Fixed bug on the click event of the Remove declaration button
+
 Version 2.1
 
 - Adjusted docking panels minimum width
