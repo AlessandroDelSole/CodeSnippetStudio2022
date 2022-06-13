@@ -23,4 +23,8 @@ With Code Snippet Studio, you have a fully-functional code editor with syntax hi
 - While the support libraries are still written in Visual Basic, the extension itself is now written in C#. This is to hopefully improve collaboration. 
 
 
-Code Snippet Studio has been built using controls from [Syncfusion's Essential Studio for WPF (Community license)](https://www.syncfusion.com/products/communitylicense)
+Code Snippet Studio has been built using controls from [Syncfusion's Essential Studio for WPF](https://www.syncfusion.com/products/communitylicense)
+
+If you enjoy the project and want to offer me a beer, please make a PayPal donation!
+
+[![PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=E92GBCUWW996J)
