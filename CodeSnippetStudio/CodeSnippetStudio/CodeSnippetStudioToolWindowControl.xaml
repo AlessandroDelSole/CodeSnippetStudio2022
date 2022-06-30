@@ -9,7 +9,7 @@
              Foreground="{DynamicResource {x:Static vsshell:VsBrushes.WindowTextKey}}"
              mc:Ignorable="d" Loaded="MyToolWindow_Loaded"
              xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
-             d:DesignHeight="300" d:DesignWidth="300" 
+             d:DesignHeight="900" d:DesignWidth="900" 
              Name="MyToolWindow">
 
 
@@ -241,7 +241,7 @@
                             <TextBlock Text="Add required namespaces:" TextWrapping="Wrap" FontWeight="Bold"/>
                             <syncfusion:SfDataGrid Grid.Row="2" ItemsSource="{Binding Namespaces, Mode=TwoWay}" x:Name="ImportsDataGrid"
 							AllowEditing="True" EditTrigger="OnTap" AddNewRowPosition="Bottom" 
-							AllowDeleting="True" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ToolTip="For Visual Basic only"
+							AllowDeleting="True" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ToolTip="For Visual Basic an C# only"
                                                    >
                                 <syncfusion:SfDataGrid.Columns>
                                     <syncfusion:GridTextColumn HeaderText="Namespaces" MappingName="ImportDirective" TextAlignment="Left" />
