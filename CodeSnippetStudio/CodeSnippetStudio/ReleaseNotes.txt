@@ -1,5 +1,9 @@
 ﻿Code Snippet Studio 2022 Release Notes
 
+Version 2.3
+
+- Added namespaces for C# as per @FrancisDOSSantos pull request
+
 Version 2.2
 
 - Fixed bug on error list line selection, now redirects to the line in the code editor
