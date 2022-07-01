@@ -1039,7 +1039,7 @@ namespace CodeSnippetStudio
                     {
                         this.editControl1.DocumentLanguage = Syncfusion.Windows.Edit.Languages.CSharp;
                         this.SnippetData.Language = "CSharp";
-                        DisableDataGrids();
+                        //DisableDataGrids();
                         AnalyzeCode();
                         break;
                     }

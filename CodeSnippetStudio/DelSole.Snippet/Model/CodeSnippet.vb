@@ -655,7 +655,7 @@ Public Class CodeSnippet
                 Next
             End If
 
-            If snippet.Language.ToUpper = "VB" Then
+            If snippet.Language.ToUpper = "VB" Or snippet.Language.ToUpper = "CSHARP" Then
                 Dim refQuery = From ref In doc...<Reference>
                                Select New Reference With {.Assembly = ref.<Assembly>.Value, .Url = ref.<Url>.Value}
 
