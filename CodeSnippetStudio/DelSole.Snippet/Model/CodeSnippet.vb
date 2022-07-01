@@ -486,11 +486,11 @@ Public Class CodeSnippet
 
         Dim editedCode = Code
 
-        If Declarations.Any Then
-            For Each decl In Declarations
-                editedCode = editedCode.Replace(decl.Default, "$" & decl.ID & "$")
-            Next
-        End If
+        'If Declarations.Any Then
+        '    For Each decl In Declarations
+        '        editedCode = editedCode.Replace(decl.Default, "$" & decl.ID & "$")
+        '    Next
+        'End If
 
         Dim keywords = Me.Keywords.Split(","c).AsEnumerable
 
@@ -645,6 +645,10 @@ Public Class CodeSnippet
             snippet.Language = doc...<Code>.@Language
             snippet.Shortcut = doc...<Shortcut>.Value
             snippet.Title = doc...<Title>.Value
+            If (doc...<SnippetType>.Value = "SurroundsWith") Then
+                snippet.Type = SnippetType.SurroundsWith
+            End If
+
 
             Dim kwQuery = From kw In doc...<Keyword>
                           Select kw.Value
@@ -722,9 +726,9 @@ Public Class CodeSnippet
                 snippet.Kind = CodeSnippetKinds.Any
             End Try
 
-            For Each decl In snippet.Declarations
-                snippet.Code = snippet.Code.Replace($"{doc...<Code>.@Delimiter}{decl.ID}{doc...<Code>.@Delimiter}", decl.Default)
-            Next
+            'For Each decl In snippet.Declarations
+            '    snippet.Code = snippet.Code.Replace($"{doc...<Code>.@Delimiter}{decl.ID}{doc...<Code>.@Delimiter}", decl.Default)
+            'Next
             snippet._fileName = Path.GetFileName(fileName)
             Return snippet
 

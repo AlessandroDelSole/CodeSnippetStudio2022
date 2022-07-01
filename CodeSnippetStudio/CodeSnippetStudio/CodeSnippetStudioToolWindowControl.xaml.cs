@@ -349,16 +349,31 @@ namespace CodeSnippetStudio
             if (editControl1.SelectedText == "")
                 return;
 
-            if (editControl1.SelectedText.ToLower() == "end" | editControl1.SelectedText.ToLower() == "select")
+            if (!(editControl1.SelectedText.Trim().StartsWith("$")) || (!editControl1.SelectedText.Trim().EndsWith("$")))
+            {
+                MessageBox.Show("Declarations must be surrounded by '$'.", "Code Snippet Studio", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (editControl1.SelectedText.Length <=2)
+            {
+                MessageBox.Show("Declarations can not be empty.", "Code Snippet Studio", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            var declarationId = editControl1.SelectedText.Substring(1, editControl1.SelectedText.Length - 2);
+
+
+            if (declarationId.ToLower() == "end" | declarationId.ToLower() == "select")
             {
                 MessageBox.Show("Declarations are not supported for Select and End words.", "Code Snippet Studio", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             DockingManager.ActivateWindow("DeclarationsDataGrid");
             var newDecl = new Declaration();
-            newDecl.Default = editControl1.SelectedText;
+            newDecl.Default = declarationId;
 
-            newDecl.ID = editControl1.SelectedText;
+            newDecl.ID = declarationId;
             newDecl.ToolTip = "Replace with yours....";
 
             var query = from decl in SnippetData.Declarations

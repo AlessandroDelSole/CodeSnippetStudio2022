@@ -127,19 +127,19 @@
     <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.0.32112.339" ExcludeAssets="runtime" />
     <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.2.2186" />
     <PackageReference Include="Syncfusion.Edit.WPF">
-      <Version>20.1.0.58</Version>
+      <Version>20.2.0.36</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.PropertyGrid.WPF">
-      <Version>20.1.0.58</Version>
+      <Version>20.2.0.36</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.SfGrid.WPF">
-      <Version>20.1.0.58</Version>
+      <Version>20.2.0.36</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Shared.WPF">
-      <Version>20.1.0.58</Version>
+      <Version>20.2.0.36</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Tools.WPF">
-      <Version>20.1.0.58</Version>
+      <Version>20.2.0.36</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Tools.WPF.Classic">
       <Version>19.4.0.56</Version>
